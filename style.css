@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  /*font-family: "Aclonica", sans-serif;
+  font-family: "Inter", sans-serif;*/
+  background-color: rgb(189, 134, 4);
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0% 3%;
+  font-family: "Cinzel", serif;
+}
+
+p {
+  height: 500px;
+  padding: 3%;
+  position: relative;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 0.1em 0em rgb(5, 5, 5);
+  transition: all 0.85s ease-in-out;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  outline: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  position: relative;
+  font-size: 1.5rem;
+  background-color: rgb(13, 12, 0);
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  transition: all 0.85s ease-in-out;
+  width: 70%;
+  color: white;
+  border-radius: 50px;
+  outline: transparent;
+}
+
+button::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: linear-gradient(#000000 0%, #ffffff 0%, #ffffff 100%, #000000 0%);
+  transform: translate(-50%, -50%);
+  transition: all 500ms ease;
+  z-index: 1;
+}
+
+p.active::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: linear-gradient(#000000 0%, #ffffff 0%, #ffffff 100%, #000000 0%);
+  transform: translate(-50%, -50%);
+  transition: all 500ms ease;
+  z-index: 1;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+p.active:hover::before {
+  width: 100%;
+  border: 2px solid transparent;
+}
+
+button span,
+p span {
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+}
+
+p span {
+  transition: all 300ms ease-in-out;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+p span.material-symbols-outlined {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button:hover span,
+p.active:hover span {
+  color: rgb(0, 0, 0);
+}
+
+.container-sub {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+  padding: 5%;
+  background: rgb(189, 134, 4);
+}
+
+p.shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 60s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
