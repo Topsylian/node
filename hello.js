@@ -28,11 +28,11 @@ generateBtn.addEventListener("click", () => {
 	copyBtn.style.visibility = "visible";
 	show.classList.remove("active");
   let story = quotes;
+  
   document.getElementById("show").innerHTML;
-
   const valueIn = randomValueFromArray(quotes);
   story.forEach(() => {
-    document.getElementById("show").innerHTML = valueIn;
+    document.getElementById("show").innerHTML = `" ${valueIn} "`;
   });
 });
 
