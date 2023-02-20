@@ -107,6 +107,11 @@ p span {
   z-index: 2;
   width: 100%;
 }
+
+#show {
+  text-align: center;
+}
+
 p span.material-symbols-outlined {
   display: flex;
   justify-content: flex-end;
